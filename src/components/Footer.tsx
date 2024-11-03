@@ -6,8 +6,21 @@ export function Footer() {
 	return (
 		<Container component="footer">
 			<Divider />
-			<Box className={styles['box']}>
-				<Link href="https://github.com/yatskeech" className={styles['link']}>
+			<Box sx={{ p: 4, display: 'flex', justifyContent: 'space-between' }}>
+				<Link
+					href="https://github.com/yatskeech"
+					color="primary"
+					underline="none"
+					sx={{
+						display: 'flex',
+						alignItems: 'center',
+						gap: 1,
+						transition: '0.25s',
+						'&:hover': {
+							color: '#000',
+						},
+					}}
+				>
 					<GitHubIcon /> github.com/yatskeech
 				</Link>
 				<Typography component="span">API & SPA, 2024</Typography>
