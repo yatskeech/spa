@@ -1,6 +1,5 @@
 import { Box, Container, Divider, Link, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import styles from './Footer.module.scss';
 
 export function Footer() {
 	return (
@@ -17,13 +16,15 @@ export function Footer() {
 						gap: 1,
 						transition: '0.25s',
 						'&:hover': {
-							color: '#000',
+							color: (theme) => theme.palette.primary.light,
 						},
 					}}
 				>
 					<GitHubIcon /> github.com/yatskeech
 				</Link>
-				<Typography component="span">API & SPA, 2024</Typography>
+				<Typography component="span" color="secondary">
+					API & SPA, 2024
+				</Typography>
 			</Box>
 		</Container>
 	);
