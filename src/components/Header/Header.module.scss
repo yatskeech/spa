@@ -1,0 +1,20 @@
+.box {
+	padding: 32px;
+	display: flex;
+	justify-content: end;
+	gap: 32px;
+}
+
+.link {
+	color: #aaa;
+	transition: transform 0.25s;
+}
+
+.link:hover {
+	color: #000;
+}
+
+.active {
+	color: #000;
+	font-weight: bold;
+}
