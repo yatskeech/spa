@@ -1,2 +1,3 @@
-export { Header } from './Header/Header.tsx';
-export { Footer } from './Footer/Footer.tsx';
+export { Header } from './Header.tsx';
+export { Footer } from './Footer.tsx';
+export { NavigationLink } from './NavigationLink';
