@@ -3,3 +3,4 @@ export { Footer } from './Footer.tsx';
 export { NavigationLink } from './NavigationLink';
 export { Title } from './Title';
 export { Paragraph } from './Paragraph';
+export { Breadcrumbs } from './Breadcrumbs.tsx';
