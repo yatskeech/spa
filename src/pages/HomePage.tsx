@@ -1,7 +1,6 @@
 import { Box, Container, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { Title } from '../components';
-import { Paragraph } from '../components/Paragraph.tsx';
+import { Paragraph, Title } from '../components';
 
 export function HomePage() {
 	return (
