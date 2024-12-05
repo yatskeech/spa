@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# 🖼️ API & SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the *API & SPA* project! This application allows users to browse through albums and users, with each album containing a list of photos. Each album and user has its own dedicated page for detailed information. Built with React, TypeScript, Material UI, and React Router, this project provides a smooth navigation experience and displays album and user data in an organized and interactive layout.
 
-Currently, two official plugins are available:
+## Table of Contents
+1. [📖 Project Overview](#-project-overview)
+2. [✨ Features](#-features)
+3. [📂 Project Structure](#-project-structure)
+4. [🧩 Components and Layouts](#-components-and-layouts)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Project Overview
+*API & SPA* enables users to:
 
-## Expanding the ESLint configuration
+- 📸 View a list of all albums, each containing a collection of photos.
+- 👥 View a list of all users and explore their individual pages.
+- 📄 Access detailed pages for each album and user, displaying all relevant information.
+- 🔍 Enjoy smooth navigation between pages with React Router and styled components using Material UI.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The project is built with TypeScript for type safety, React Router for routing, and Material UI for a modern and responsive design.
 
-- Configure the top-level `parserOptions` property like this:
+## ✨ Features
+- 📸 **Album Listings**: Users can view all available albums in a list format and click to explore individual albums containing photos.
+- 👥 **User Listings**: Users can view all available users and navigate to detailed pages for each user.
+- 📄 **Individual Album and User Pages**: Each album and user has its own dedicated page displaying detailed information.
+- 🔄 **Dynamic Routing**: React Router enables smooth transitions and dynamic loading of pages for albums and users.
+- 🎨 **Material UI Integration**: The app uses Material UI components for a polished and responsive design.
+- ⏳ **Loading States**: Displays loading indicators for asynchronous data fetching and page rendering.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Project Structure
+```plaintext
+api-spa/
+├── index.html
+├── public/
+├── src/
+│   ├── api/
+│   ├── components/
+│   ├── declarations.d.ts
+│   ├── index.scss
+│   ├── layouts/
+│   ├── main.tsx
+│   ├── pages/
+│   ├── router/
+│   ├── theme/
+│   └── types/
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🧩 Components and Layouts
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Components
+- 🎨 **Header**: Displays the title and navigation links of the application.
+- 📝 **Footer**: A simple footer component to provide additional information and links.
+- 🔗 **NavigationLink**: A reusable link component used for routing between pages.
+- 📃 **Paragraph**: Displays textual content, used across various pages.
+- 🏷️ **Title**: Used to display titles on different pages for better readability.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Layouts
+- **Layout**: A shared layout for the entire app that includes the header, footer, and navigation components. It wraps around the content of each page.
+
+### Pages
+- **HomePage**: The landing page of the application.
+- **AlbumListPage**: Displays a list of all albums.
+- **AlbumPage**: Displays detailed information about a specific album, including photos.
+- **UserListPage**: Displays a list of all users.
+- **UserPage**: Displays detailed information about a specific user.
+- **ErrorPage**: Shows a generic error message for any issues in the app.
+- **NotFoundPage**: Displays when a user navigates to a non-existent route.
+- **LoadingPage**: A loading screen shown when data is being fetched.
+
